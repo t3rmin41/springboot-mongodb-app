@@ -18,14 +18,14 @@ public class CustomerController {
   @Autowired
   private CustomerService customerService;
   
-  @RequestMapping(value = "/name/{name}", method = RequestMethod.GET)
-  public @ResponseBody Customer getCustomerByFirstName(@PathVariable("name") String name) {
-    return customerService.findByFirstName(name);
+  @RequestMapping(value = "/all", method = RequestMethod.GET)
+  public @ResponseBody List<Customer> getAllCustomers() {
+    return customerService.getAllCustomers();
   }
 
-  @RequestMapping(value = "/name/list/{name}", method = RequestMethod.GET)
-  public @ResponseBody List<Customer> getCustomerByLastName(@PathVariable("name") String name) {
-    return customerService.findByLastName(name);
+  @RequestMapping(value = "/save", method = RequestMethod.POST)
+  public @ResponseBody Customer saveCustomer(Customer customer) {
+    return customerService.saveCustomer(customer);
   }
   
 }

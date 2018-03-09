@@ -5,21 +5,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.domain.entity.Customer;
 import com.domain.repository.CustomerRepository;
+import com.domain.repository.CustomerRepositoryCustom;
 
 @Service
 public class CustomerServiceImpl implements CustomerService {
 
   @Autowired
-  private CustomerRepository customerRepo;
+  private CustomerRepositoryCustom customerRepo;
   
   @Override
-  public Customer findByFirstName(String name) {
-    return customerRepo.findByFirstName(name);
+  public List<Customer> getAllCustomers() {
+    return customerRepo.getAllCustomers();
   }
 
   @Override
-  public List<Customer> findByLastName(String name) {
-    return customerRepo.findByLastName(name);
+  public Customer saveCustomer(Customer customer) {
+    return customerRepo.saveCustomer(customer);
   }
 
 }

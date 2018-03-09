@@ -8,9 +8,11 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Import;
 
 import com.domain.config.AppConfig;
+import com.domain.config.MongoDbConfig;
+import com.domain.config.SwaggerConfig;
 
 @SpringBootApplication
-@Import({AppConfig.class})
+@Import({MongoDbConfig.class, AppConfig.class, SwaggerConfig.class})
 public class App {
 
   private static final Logger logger = LoggerFactory.getLogger(App.class);

@@ -5,7 +5,7 @@ import com.domain.entity.Customer;
 
 public interface CustomerService {
 
-  Customer findByFirstName(String name);
-  List<Customer> findByLastName(String name);
+  List<Customer> getAllCustomers();
+  Customer saveCustomer(Customer customer);
   
 }

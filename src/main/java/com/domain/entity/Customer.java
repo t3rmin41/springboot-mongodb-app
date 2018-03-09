@@ -1,10 +1,14 @@
 package com.domain.entity;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document(collection = "customers")
 public class Customer {
 
   @Id
+  @Indexed(unique = true)
   public String id;
 
   public String firstName;
