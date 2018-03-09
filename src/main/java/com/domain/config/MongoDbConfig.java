@@ -26,7 +26,7 @@ public class MongoDbConfig extends AbstractMongoConfiguration {
 
   private static final String MONGO_DB_HOST = "127.0.0.1";
   private static final int MONGO_DB_PORT = 27017;
-  private static final String MONGO_DB_NAME = "embeded_db";
+  private static final String MONGO_DB_NAME = "embedded_db";
   private static final String MONGO_DB_USERNAME = "test";
   private static final String MONGO_DB_PASSWORD = "test";
 
